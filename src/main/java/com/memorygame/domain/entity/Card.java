@@ -6,13 +6,13 @@ public class Card
 {
 
     private final int identifier;
-    private final String value;
+    private final String imagePath;
     private CardState state;
 
     public Card(int identifier, String value)
     {
         this.identifier = identifier;
-        this.value = value;
+        this.imagePath = value;
         this.state = CardState.FACE_DOWN;
     }
     public int getIdentifier()
@@ -26,9 +26,9 @@ public class Card
         throw new UnsupportedOperationException("Identifier is final and cannot be changed.");
     }
 
-    public String getValue()
+    public String getImagePath()
     {
-        return value;
+        return imagePath;
     }
 
     public CardState getState()
